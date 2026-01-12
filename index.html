@@ -2,138 +2,157 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Neuralink AI | Platform Automasi SaaS Masa Depan</title>
-    <meta name="description" content="Otomatiskan alur kerja bisnis Anda dengan kecerdasan buatan tingkat lanjut. Neuralink AI: Cepat, Aman, dan Skalabel.">
+    <title>Lumina Glow | Rahasia Kulit Bercahaya Alami dengan Kekuatan Teknologi</title>
+    <meta name="description" content="Rasakan transformasi kulit dengan Lumina Glow. Serum & perawatan wajah premium yang memadukan ekstrak alami langka dengan teknologi bio-aktif mutakhir.">
+    <meta name="keywords" content="Skincare Mewah Indonesia, Perawatan Wajah Premium, Serum Anti-Aging Terbaik, Lumina Glow, Kecantikan Alami, Glowing Skin">
+    <link rel="canonical" href="https://lumina-glow.vercel.app/">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Lumina Glow Serum Elixir",
+      "description": "Serum wajah bio-aktif untuk kulit bercahaya alami.",
+      "brand": { "@type": "Brand", "name": "Lumina Glow" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IDR",
+        "price": "1250000",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
 
     <style>
-        :root { --p: #6366f1; --s: #a855f7; --bg: #020617; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #fff; margin: 0; overflow-x: hidden; }
-
-        /* HERO ATMOSPHERE */
-        .hero-wrap {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.95)), 
-                        url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 80px 0;
+        :root { 
+            --primary-bg: #1a001a; 
+            --glow-color: #f7a0e1; 
+            --accent-color: #c084fc; 
+            --light-bg: #2a0a2a;
         }
 
-        /* GLASS PANEL (RESPONSIVE) */
-        .glass-panel {
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
+            margin: 0; padding: 0;
+            background-color: var(--primary-bg);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        /* DYNAMIC GRADIENT BACKGROUND (EYE-CATCHING) */
+        .dynamic-gradient {
+            position: fixed; inset: 0; z-index: -2;
+            background: linear-gradient(135deg, #1a001a, #3a003a);
+            animation: gradient-shift 15s ease infinite alternate;
+        }
+        @keyframes gradient-shift {
+            0% { background: linear-gradient(135deg, #1a001a, #3a003a); }
+            33% { background: linear-gradient(135deg, #2a002a, #4a004a); }
+            66% { background: linear-gradient(135deg, #3a003a, #5a005a); }
+            100% { background: linear-gradient(135deg, #1a001a, #3a003a); }
+        }
+
+        /* FLOATING PETALS (ILLUSTRATION) */
+        .petal {
+            position: absolute; width: 80px; height: 80px; opacity: 0;
+            background: radial-gradient(circle, rgba(247, 160, 225, 0.2), transparent 70%);
+            border-radius: 50%; pointer-events: none; z-index: -1;
+            animation: float-petal 15s infinite;
+        }
+        .petal:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .petal:nth-child(2) { left: 40%; top: 5%; animation-delay: 5s; transform: scale(0.8); }
+        .petal:nth-child(3) { left: 70%; top: 30%; animation-delay: 10s; transform: scale(1.2); }
+        @keyframes float-petal {
+            0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg) scale(1); opacity: 0; }
+        }
+
+        /* GLASS CARD (MODIFIED AURA.BUILD) */
+        .glass-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 2rem; /* Default Mobile */
+            border-radius: 30px;
+            padding: 2rem;
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        @media (min-width: 768px) {
-            .glass-panel { padding: 3.5rem; border-radius: 40px; }
-        }
+        @media (min-width: 768px) { .glass-card { padding: 3rem; } }
 
-        /* PREMIUM GLOW BUTTON */
-        .btn-glow {
+        /* HERO TEXT STYLE */
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem; /* mobile */
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+        }
+        @media (min-width: 768px) { .hero-title { font-size: 5rem; } }
+
+        /* BUTTON AURA (LUMINA STYLE) */
+        .btn-lumina {
             position: relative; display: inline-flex; padding: 1rem 2.5rem;
-            background: #000; border-radius: 12px; overflow: hidden;
-            font-weight: 800; letter-spacing: 1px; z-index: 1; font-size: 0.8rem;
+            background: linear-gradient(45deg, #f7a0e1, #c084fc); /* Soft gradient */
+            border-radius: 12px; font-weight: 700; overflow: hidden;
+            transition: 0.3s; z-index: 1;
+            color: #1a001a;
         }
-        .btn-glow::before {
-            content: ''; position: absolute; inset: -200%;
-            background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--p) 320deg, var(--s) 360deg);
-            animation: rotate-beam 3s linear infinite;
-        }
-        .btn-glow::after {
-            content: ''; position: absolute; inset: 2px; background: #020617; border-radius: 10px; z-index: -1;
-        }
-        @keyframes rotate-beam { 100% { transform: rotate(360deg); } }
-        .btn-glow span { background: linear-gradient(to right, #fff, var(--p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        .text-gradient { background: linear-gradient(to bottom right, #fff 30%, var(--p) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .bento-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px; transition: 0.5s;
-            overflow: hidden;
+        .btn-lumina:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(247, 160, 225, 0.4);
         }
 
-        /* FIX: Dynamic Letter Spacing for Mobile */
-        .tracking-dynamic { letter-spacing: 0.5em; }
-        @media (max-width: 640px) {
-            .tracking-dynamic { letter-spacing: 0.1em; font-size: 0.7rem; }
+        .text-gradient-soft {
+            background: linear-gradient(135deg, #fff 30%, #f7a0e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        /* SPLINE CONTAINER */
+        .spline-wrap {
+            width: 100%; height: 350px; position: relative;
+        }
+        @media (min-width: 768px) { .spline-wrap { height: 500px; } }
     </style>
 </head>
 <body>
 
-    <header class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-black italic tracking-tighter">NEURALINK<span class="text-indigo-500">.AI</span></div>
-        <a href="https://wa.me/6285283212205" class="bg-indigo-600 text-white px-5 py-2 rounded-full font-black text-[9px] uppercase tracking-widest hover:scale-105 transition">Connect</a>
+    <div class="dynamic-gradient"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <header class="fixed top-0 w-full z-[100] px-4 py-4 flex justify-between items-center backdrop-blur-md bg-black/10">
+        <div class="text-xl font-bold italic tracking-wider text-gradient-soft">LUMINA<span class="text-purple-300">GLOW</span></div>
+        <a href="https://wa.me/6285283212205" class="bg-gradient-to-br from-[#f7a0e1] to-[#c084fc] text-black px-4 py-2 rounded-full font-bold text-xs uppercase tracking-wider hover:scale-105 transition">Shop Now</a>
     </header>
 
     <main>
-        <section class="hero-wrap">
-            <div class="container mx-auto px-6 grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
+        <section class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+            <div class="container mx-auto px-4 grid lg:grid-cols-2 items-center gap-8 lg:gap-16">
                 
-                <div class="glass-panel relative z-10 order-2 lg:order-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-[2px] bg-indigo-500"></span>
-                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-300">Enterprise AI v2.6</span>
+                <div class="glass-card relative z-10 order-2 lg:order-1">
+                    <div class="inline-block bg-gradient-to-r from-purple-400/20 to-pink-400/20 px-3 py-1 rounded-full mb-4">
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-purple-200">New Age Elixir Formula</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] lg:leading-[0.95] mb-6 tracking-tighter">
-                        BEYOND <br class="hidden md:block"> <span class="text-gradient font-light italic">INTELLIGENCE.</span>
+                    <h1 class="hero-title font-bold mb-4 text-gradient-soft">
+                        Kecantikan <br> Abadi, <br> Diciptakan Ulang.
                     </h1>
-                    <p class="text-gray-300 text-sm md:text-lg mb-8 leading-relaxed">
-                        Otomatiskan alur kerja rumit dalam hitungan detik dengan <span class="text-white font-bold decoration-indigo-500">Neuralink AI</span>.
+                    <p class="text-gray-200 text-sm md:text-base mb-8 leading-relaxed max-w-md">
+                        Ungkap rahasia kulit bercahaya sempurna dengan <span class="text-white font-bold">Lumina Glow</span>. Perpaduan harmonis antara ekstrak botani langka dan teknologi bio-aktif mutakhir.
                     </p>
-                    <a href="https://wa.me/6285283212205" class="btn-glow">
-                        <span>LAUNCH APP →</span>
+                    <a href="https://wa.me/6285283212205" class="btn-lumina">
+                        <span>TEMUKAN CAHAYA ANDA →</span>
                     </a>
                 </div>
 
-                <div class="h-[300px] md:h-[500px] w-full relative z-10 order-1 lg:order-2">
-                    <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-                <div class="bento-box p-6 md:p-10 md:col-span-2">
-                    <h3 class="text-2xl md:text-3xl font-black mb-3 tracking-tighter italic text-indigo-400 uppercase">Real-time Analytics</h3>
-                    <p class="text-gray-400 text-sm md:text-base">Engine AI tercepat di industri SaaS saat ini.</p>
-                </div>
-                <div class="bento-box p-6 flex flex-col justify-center text-center">
-                    <div class="text-3xl md:text-5xl font-black mb-1">99%</div>
-                    <div class="text-[9px] font-bold uppercase tracking-widest text-indigo-500">Accuracy Rate</div>
-                </div>
-                <div class="bento-box p-6 flex flex-col justify-center text-center">
-                    <div class="text-3xl md:text-5xl font-black mb-1">24/7</div>
-                    <div class="text-[9px] font-bold uppercase tracking-widest text-indigo-500">Automated Sync</div>
-                </div>
-                <div class="bento-box md:col-span-4 p-4 md:p-1 flex overflow-hidden">
-                   <div class="w-full h-24 md:h-40 bg-indigo-900/10 backdrop-blur-xl flex items-center justify-center border border-white/5 rounded-xl md:rounded-[28px] overflow-hidden">
-                        <span class="tracking-dynamic uppercase text-indigo-400 animate-pulse italic font-bold text-center px-4">Connecting Neural Network...</span>
-                   </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-10 border-t border-white/5 text-center opacity-40">
-        <p class="text-[9px] font-black tracking-[0.5em] md:tracking-[1em] uppercase">Neuralink AI • SIAGA 1 PROTOCOL</p>
-    </footer>
-
-</body>
-</html>
+                <div class="spline-wrap relative z-10 order-1 lg:order-2">
+                    <spline-viewer url="
