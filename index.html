@@ -4,150 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Neuralink AI | Revolusi Otomatisasi Alur Kerja Masa Depan</title>
-    <meta name="description" content="Platform SaaS AI tercanggih untuk produktivitas. Rasakan kecepatan analisis data dan otomatisasi tanpa batas dengan standar keamanan militer.">
-    <link rel="canonical" href="https://project-6-saas-ai.vercel.app/">
+    <title>Neuralink AI | Platform Automasi SaaS Masa Depan</title>
+    <meta name="description" content="Otomatiskan alur kerja bisnis Anda dengan kecerdasan buatan tingkat lanjut. Neuralink AI: Cepat, Aman, dan Skalabel.">
+    <meta name="keywords" content="SaaS AI Indonesia, Automasi Bisnis, Software Produktivitas, Neuralink AI, Landing Page Tech">
     
-    <meta property="og:title" content="Neuralink AI - Autopilot Your Business">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
 
     <style>
-        :root { --p: #6366f1; --s: #a855f7; --bg: #030712; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #fff; overflow-x: hidden; }
+        :root { --p: #6366f1; --s: #a855f7; --bg: #020617; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #fff; margin: 0; overflow-x: hidden; }
 
-        /* AURA BACKGROUND (Premium Look) */
-        .aura-bg {
-            position: fixed; inset: 0; z-index: -1;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15), transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.1), transparent 40%);
-        }
-
-        /* DYNAMIC GRID BEAM (Inspired by Aura.build) */
-        .grid-beam {
-            position: fixed; inset: 0; z-index: -1;
-            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        /* HERO ATMOSPHERE (SIAGA 1: EYE-CATCHING BACKGROUND) */
+        .hero-wrap {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Gambar Teknologi di Background */
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        /* BUTTON AURA PREMIERE (Ref: A034D Modified) */
-        .btn-aura {
-            position: relative; padding: 1rem 2.5rem;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
-            font-weight: 800; font-size: 0.85rem; letter-spacing: 1px;
-            overflow: hidden; transition: 0.5s;
+        /* DYNAMIC AURA BEAMS */
+        .aura-beam {
+            position: absolute; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+            filter: blur(80px); z-index: 1; pointer-events: none;
+            animation: move-aura 10s infinite alternate;
         }
-        .btn-aura::before {
-            content: ''; position: absolute; inset: -150%;
-            background: conic-gradient(from 0deg, transparent 0deg, transparent 200deg, var(--p) 300deg, var(--s) 360deg);
-            animation: rotate-beam 4s linear infinite; z-index: -1;
+        @keyframes move-aura { 
+            0% { transform: translate(-20%, -20%); } 
+            100% { transform: translate(50%, 50%); } 
         }
-        .btn-aura::after {
-            content: ''; position: absolute; inset: 1.5px;
-            background: #030712; border-radius: 11px; z-index: -1;
+
+        /* GLASS PANEL CONTENT (MODIFIED FROM AURA.BUILD) */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            padding: 3.5rem;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+        }
+
+        /* PREMIUM GLOW BUTTON (A034D STYLE) */
+        .btn-glow {
+            position: relative; display: inline-flex; padding: 1.2rem 3.5rem;
+            background: #000; border-radius: 12px; overflow: hidden;
+            font-weight: 800; letter-spacing: 1px; z-index: 1;
+        }
+        .btn-glow::before {
+            content: ''; position: absolute; inset: -200%;
+            background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--p) 320deg, var(--s) 360deg);
+            animation: rotate-beam 3s linear infinite;
+        }
+        .btn-glow::after {
+            content: ''; position: absolute; inset: 2px; background: #020617; border-radius: 10px; z-index: -1;
         }
         @keyframes rotate-beam { 100% { transform: rotate(360deg); } }
-        .btn-aura:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); }
+        .btn-glow span { background: linear-gradient(to right, #fff, var(--p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* BENTO BOX */
-        .bento-card {
-            background: rgba(255, 255, 255, 0.02);
+        .text-gradient { background: linear-gradient(to bottom right, #fff 30%, var(--p) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* BENTO BOX 2.0 */
+        .bento-box {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px; padding: 2rem;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 30px; transition: 0.5s;
         }
-        .bento-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--p);
-            transform: translateY(-5px);
-        }
-
-        .text-gradient {
-            background: linear-gradient(to right, #fff, #a855f7);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
+        .bento-box:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.07); border-color: var(--p); }
     </style>
 </head>
 <body>
 
-    <div class="aura-bg"></div>
-    <div class="grid-beam"></div>
+    <div class="aura-beam"></div>
 
-    <header class="fixed top-0 w-full z-50 py-6 px-[8%] flex justify-between items-center backdrop-blur-xl border-b border-white/5">
-        <div class="text-2xl font-black italic tracking-tighter">NEURALINK<span class="text-indigo-500">.</span></div>
-        <nav class="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
-            <a href="#" class="hover:text-white transition">Product</a>
-            <a href="#" class="hover:text-white transition">Intelligence</a>
-            <a href="#" class="hover:text-white transition">Enterprise</a>
-        </nav>
-        <a href="https://wa.me/6285283212205" class="bg-white text-black px-6 py-2 rounded-full font-bold text-[10px] uppercase">Login</a>
+    <header class="fixed top-0 w-full z-[100] px-8 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-2xl font-black italic tracking-tighter">NEURALINK<span class="text-indigo-500">.AI</span></div>
+        <a href="https://wa.me/6285283212205" class="bg-indigo-600 text-white px-8 py-2 rounded-full font-black text-[10px] uppercase tracking-widest hover:scale-110 transition shadow-[0_0_20px_rgba(99,102,241,0.5)]">Try Free</a>
     </header>
 
-    <main class="pt-32">
-        <section class="px-[8%] mb-40">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-block bg-indigo-500/10 border border-indigo-500/30 px-4 py-1 rounded-full mb-8">
-                    <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">Next-Gen AI Engine v4.0</span>
-                </div>
-                <h1 class="text-6xl md:text-[100px] font-black leading-[0.85] mb-10 tracking-tighter">
-                    THINK LESS. <br> <span class="text-gradient font-light italic text-7xl md:text-[120px]">AUTOMATE.</span>
-                </h1>
-                <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light">
-                    Transformasikan cara tim Anda bekerja. <span class="text-white font-bold">Neuralink AI</span> menyatukan kecerdasan buatan dengan alur kerja SaaS yang mulus.
-                </p>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="https://wa.me/6285283212205" class="btn-aura">
-                        <span>START YOUR JOURNEY →</span>
+    <main>
+        <section class="hero-wrap">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-16 pt-20">
+                
+                <div class="glass-panel relative z-10 fade-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-12 h-[2px] bg-indigo-500"></span>
+                        <span class="text-xs font-bold uppercase tracking-[0.4em] text-indigo-300">Enterprise AI v2.6</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black leading-[0.95] mb-8 tracking-tighter">
+                        BEYOND <br> <span class="text-gradient font-light italic">INTELLIGENCE.</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg mb-12 leading-relaxed font-medium">
+                        Otomatisasi alur kerja rumit dalam hitungan detik. Biarkan <span class="text-white font-bold underline decoration-indigo-500">Neuralink AI</span> yang bekerja, sementara Anda fokus pada pertumbuhan.
+                    </p>
+                    <a href="https://wa.me/6285283212205" class="btn-glow">
+                        <span>LAUNCH APP →</span>
                     </a>
                 </div>
-            </div>
 
-            <div class="mt-20 h-[500px] w-full relative">
-                <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
-                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#030712] to-transparent"></div>
+                <div class="h-[600px] w-full relative z-10">
+                    <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
+                </div>
             </div>
         </section>
 
-        <section class="px-[8%] py-32 bg-white/5 backdrop-blur-sm">
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bento-card md:col-span-2">
-                    <h3 class="text-3xl font-bold mb-4">Spatial Data Processing</h3>
-                    <p class="text-gray-500 max-w-md">Analisis jutaan data dalam satu dashboard intuitif dengan visualisasi 3D real-time.</p>
-                    <div class="mt-10 h-40 bg-indigo-500/20 rounded-xl border border-indigo-500/30 flex items-center justify-center font-bold italic text-indigo-400">
-                        Visualizing Neural Network...
-                    </div>
+        <section class="py-32 container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bento-box p-10 md:col-span-2">
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter italic text-indigo-400 uppercase">Real-time Analytics</h3>
+                    <p class="text-gray-400 leading-relaxed">Pantau setiap pergerakan data bisnis Anda dengan engine AI tercepat di industri SaaS.</p>
                 </div>
-                <div class="bento-card">
-                    <div class="w-12 h-12 bg-indigo-500 rounded-lg mb-6 flex items-center justify-center font-black">AI</div>
-                    <h3 class="text-xl font-bold mb-2">Smart Sync</h3>
-                    <p class="text-gray-500 text-sm">Hubungkan semua alat kerja Anda (Slack, Figma, GitHub) secara instan.</p>
+                <div class="bento-box p-10 flex flex-col justify-center text-center">
+                    <div class="text-5xl font-black mb-2">99%</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500">Accuracy Rate</div>
                 </div>
-                <div class="bento-card">
-                    <h3 class="text-xl font-bold mb-2">Security Hub</h3>
-                    <p class="text-gray-500 text-sm">Enkripsi End-to-End dengan protokol keamanan tingkat militer.</p>
+                <div class="bento-box p-10 flex flex-col justify-center text-center">
+                    <div class="text-5xl font-black mb-2">24/7</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500">Automated Sync</div>
                 </div>
-                <div class="bento-card md:col-span-2 flex items-center justify-between">
-                    <div>
-                        <h3 class="text-3xl font-bold mb-2">Infinite Scaling</h3>
-                        <p class="text-gray-500">Tumbuh bersama bisnis Anda tanpa batasan infrastruktur.</p>
-                    </div>
-                    <div class="text-5xl font-black text-indigo-500/30">99.9%</div>
+                <div class="bento-box md:col-span-4 p-1 flex overflow-hidden">
+                   <div class="w-full h-40 bg-indigo-900/20 backdrop-blur-xl flex items-center justify-center border border-white/5 rounded-[28px]">
+                        <span class="text-xs font-bold tracking-[2em] uppercase text-indigo-400 animate-pulse italic">Connecting Neural Network...</span>
+                   </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-20 text-center border-t border-white/5 opacity-50">
-        <p class="text-[10px] font-bold tracking-[1.5em] uppercase text-gray-700">Powered by Omniversal • © 2026</p>
+    <footer class="py-20 border-t border-white/5 text-center opacity-40">
+        <p class="text-[10px] font-black tracking-[1em] uppercase">Neuralink AI • SIAGA 1 PROTOCOL</p>
     </footer>
 
 </body>
