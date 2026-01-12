@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Neuralink AI | Dominasi Pasar dengan Automasi AI Tercanggih</title>
-    <meta name="description" content="Hancurkan hambatan operasional. Neuralink AI membangun infrastruktur cerdas yang bekerja 24/7 untuk skala bisnis global.">
-    <link rel="canonical" href="https://project-6-saas-ai.vercel.app/">
+    <title>Neuralink AI | Platform Automasi SaaS Masa Depan</title>
+    <meta name="description" content="Hancurkan hambatan operasional dengan Neuralink AI. Infrastruktur cerdas yang bekerja 24/7 untuk skala bisnis global.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
@@ -20,21 +19,27 @@
             background-color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; color: #fff;
         }
 
-        /* ATMOSPHERIC BACKGROUND (WARP SPEED) */
-        .bg-warp {
+        /* 1. ATMOSPHERIC & METEOR BACKGROUND */
+        .bg-space {
             position: fixed; inset: 0; z-index: -1;
             background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #030014 100%);
         }
 
-        /* NEON BEAM ANIMATION */
-        .beam {
-            position: absolute; width: 1px; height: 100px;
-            background: linear-gradient(to bottom, transparent, var(--p), transparent);
-            opacity: 0.3; animation: beam-drop 4s linear infinite;
+        /* EFEK METEOR JATUH BERKILAT */
+        .starfall {
+            position: absolute; width: 2px; height: 150px;
+            background: linear-gradient(to bottom, transparent, var(--s), #fff);
+            opacity: 0.6; animation: starfall-anim 5s linear infinite;
+            filter: drop-shadow(0 0 10px var(--s));
         }
-        @keyframes beam-drop { 0% { transform: translateY(-100vh); } 100% { transform: translateY(100vh); } }
+        @keyframes starfall-anim {
+            0% { transform: translateY(-200px) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) translateX(100px); opacity: 0; }
+        }
 
-        /* THE SUPREME SHINY BUTTON (Ref: Aura 9F6B02 Modded) */
+        /* 2. SHINY BUTTON AURA (THE MAGICAL BUTTON) */
         .aura-shiny-btn {
             position: relative; padding: 1rem 2.5rem; border-radius: 12px;
             background: #000; color: #fff; font-weight: 800; font-size: 0.8rem;
@@ -42,24 +47,20 @@
             align-items: center; justify-content: center; overflow: hidden; border: none;
             cursor: pointer; transition: 0.5s; text-decoration: none;
         }
-
         .aura-shiny-btn::before {
             content: ""; position: absolute; inset: -150%;
             background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--p) 320deg, var(--s) 360deg);
             animation: rotate-beam 3s linear infinite; z-index: 0;
         }
-
         .aura-shiny-btn::after {
             content: ""; position: absolute; inset: var(--shiny-width);
             background: #050505; border-radius: 10px; z-index: 1;
         }
-
         .inner-glow {
             position: absolute; inset: 0;
             background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.1) 50%, transparent 75%);
             background-size: 200% 200%; animation: shine-move 4s infinite; z-index: 2;
         }
-
         .btn-content {
             position: relative; z-index: 3; display: flex; align-items: center; gap: 10px;
             background: linear-gradient(to right, #fff, #a855f7);
@@ -69,44 +70,44 @@
         @keyframes rotate-beam { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes shine-move { 0% { background-position: -200% -200%; } 100% { background-position: 200% 200%; } }
 
-        /* CARD & BENTO */
+        /* 3. CARD & LAYOUT */
         .card-premium {
             background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px;
             transition: 0.5s; position: relative; overflow: hidden;
         }
-
-        .text-gradient { background: linear-gradient(to right, #fff, var(--p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background: linear-gradient(to right, #fff 30%, var(--p) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body>
 
-    <div class="bg-warp"></div>
-    <div class="beam" style="left: 15%; animation-delay: 0s;"></div>
-    <div class="beam" style="left: 45%; animation-delay: 2s;"></div>
-    <div class="beam" style="left: 85%; animation-delay: 1s;"></div>
+    <div class="bg-space"></div>
+    <div class="starfall" style="left: 20%; animation-duration: 4s; animation-delay: 0s;"></div>
+    <div class="starfall" style="left: 50%; animation-duration: 7s; animation-delay: 2s;"></div>
+    <div class="starfall" style="left: 80%; animation-duration: 5s; animation-delay: 1s;"></div>
+    <div class="starfall" style="left: 10%; animation-duration: 6s; animation-delay: 3s;"></div>
 
     <header class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5 bg-black/20">
-        <div class="text-xl font-black tracking-tighter uppercase">NEURALINK<span class="text-indigo-500">.AI</span></div>
+        <div class="text-xl font-black tracking-tighter uppercase">NEURALINK<span class="text-indigo-500">.</span></div>
         <a href="https://wa.me/6285283212205" class="aura-shiny-btn !px-4 !py-2 !text-[9px]">
             <div class="inner-glow"></div>
             <span class="btn-content">Join Now</span>
         </a>
     </header>
 
-    <main class="pt-24">
-        <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6">
+    <main class="relative z-10 pt-32">
+        <section class="flex flex-col items-center text-center px-6">
             <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-2 rounded-full mb-8">
                 <span class="text-[9px] font-bold text-indigo-300 uppercase tracking-widest">Efficiency Multiplied by 10x</span>
             </div>
             
-            <h1 class="text-4xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.9]">
+            <h1 class="text-5xl md:text-8xl lg:text-[110px] font-black mb-8 leading-[0.85] tracking-tighter">
                 STOP WORKING.<br>
                 <span class="text-gradient italic">START SCALING.</span>
             </h1>
             
-            <p class="text-gray-400 text-sm md:text-xl max-w-2xl mb-10 leading-relaxed">
-                Neuralink AI adalah <span class="text-white font-bold">otak kedua bisnis Anda</span>. Otomatisasi alur kerja rumit dalam hitungan detik.
+            <p class="text-gray-400 text-sm md:text-xl max-w-2xl mb-12 leading-relaxed">
+                Neuralink AI bukan sekadar alat. Ini adalah <span class="text-white font-bold underline decoration-indigo-500">otak kedua bisnis Anda</span> yang mengotomatisasi segalanya saat Anda tidur.
             </p>
 
             <a href="https://wa.me/6285283212205" class="aura-shiny-btn">
@@ -117,11 +118,11 @@
                 </span>
             </a>
 
-            <div class="w-full max-w-5xl mx-auto mt-20 card-premium p-1">
-                <div class="relative rounded-[28px] overflow-hidden bg-black/40 min-h-[300px] md:min-h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="w-full max-w-6xl mx-auto mt-20 card-premium p-1 group">
+                <div class="relative rounded-[28px] overflow-hidden bg-black/60 min-h-[300px] md:min-h-[550px]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent"></div>
-                    <div class="relative w-full h-[300px] md:h-[500px]">
+                    <div class="relative w-full h-[300px] md:h-[550px]">
                         <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
                     </div>
                 </div>
@@ -129,7 +130,46 @@
         </section>
 
         <section class="py-32 container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card-premium p-8 h-[300px] flex flex-col justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="card-premium p-10 md:col-span-2 flex flex-col justify-between">
                     <div>
-                        <div class="w-10 h-10 bg-indigo-500 rounded-xl mb-4 shadow-[0_0
+                        <div class="w-14 h-14 bg-indigo-500 rounded-2xl mb-6 shadow-[0_0_30px_var(--p)] flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7"/><path d="M16 5V3"/><path d="M8 5V3"/><path d="M3 9h18"/><path d="M20 21v-6"/><path d="M17 18h6"/></svg>
+                        </div>
+                        <h3 class="text-4xl font-black mb-4 tracking-tighter uppercase italic text-indigo-400">Neural Analytics</h3>
+                        <p class="text-gray-400 text-lg">Proses jutaan baris data dalam hitungan milidetik dengan akurasi 99.9%.</p>
+                    </div>
+                </div>
+
+                <div class="card-premium p-10 flex flex-col justify-center text-center">
+                    <div class="text-6xl font-black mb-2 text-white italic">24/7</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500">Live Automation</div>
+                </div>
+
+                <div class="card-premium p-10 flex flex-col justify-center text-center">
+                    <div class="text-6xl font-black mb-2 text-white italic">0.1s</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500">Response Time</div>
+                </div>
+
+                <div class="card-premium md:col-span-4 p-12 bg-gradient-to-br from-indigo-900/20 to-transparent flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div class="max-w-xl text-center md:text-left">
+                        <h3 class="text-4xl font-black mb-4">Enterprise Scaling</h3>
+                        <p class="text-gray-400">Tinggalkan infrastruktur lama. Neuralink AI membangun sistem yang tumbuh bersama bisnis Anda secara instan.</p>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-indigo-500 w-[75%] animate-pulse shadow-[0_0_15px_var(--p)]"></div>
+                        </div>
+                        <div class="mt-4 text-center text-[10px] font-bold tracking-[1em] uppercase text-indigo-400">Syncing Intelligence...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="text-[10px] font-black tracking-[2em] uppercase text-gray-700">Neuralink AI • SIAGA 1 PROTOCOL</p>
+    </footer>
+
+</body>
+</html>
