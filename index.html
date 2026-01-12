@@ -6,19 +6,18 @@
     
     <title>Neuralink AI | Dominasi Pasar dengan Automasi AI Tercanggih</title>
     <meta name="description" content="Hancurkan hambatan operasional. Neuralink AI membangun infrastruktur cerdas yang bekerja 24/7 untuk skala bisnis global.">
+    <link rel="canonical" href="https://project-6-saas-ai.vercel.app/">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
 
     <style>
-        :root { --p: #6366f1; --s: #a855f7; --bg: #030014; }
+        :root { --p: #6366f1; --s: #a855f7; --bg: #030014; --shiny-width: 2px; }
         
-        body { 
-            background-color: var(--bg);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #fff;
-            overflow-x: hidden;
+        html, body { 
+            max-width: 100%; overflow-x: hidden; margin: 0; padding: 0;
+            background-color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; color: #fff;
         }
 
         /* ATMOSPHERIC BACKGROUND (WARP SPEED) */
@@ -26,139 +25,111 @@
             position: fixed; inset: 0; z-index: -1;
             background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #030014 100%);
         }
-        .bg-warp::before {
-            content: ''; position: absolute; inset: 0;
-            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-            opacity: 0.3;
-        }
 
         /* NEON BEAM ANIMATION */
         .beam {
-            position: absolute; width: 2px; height: 100px;
+            position: absolute; width: 1px; height: 100px;
             background: linear-gradient(to bottom, transparent, var(--p), transparent);
-            opacity: 0.5; animation: beam-drop 3s linear infinite;
+            opacity: 0.3; animation: beam-drop 4s linear infinite;
         }
-        @keyframes beam-drop {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
+        @keyframes beam-drop { 0% { transform: translateY(-100vh); } 100% { transform: translateY(100vh); } }
+
+        /* THE SUPREME SHINY BUTTON (Ref: Aura 9F6B02 Modded) */
+        .aura-shiny-btn {
+            position: relative; padding: 1rem 2.5rem; border-radius: 12px;
+            background: #000; color: #fff; font-weight: 800; font-size: 0.8rem;
+            letter-spacing: 1px; text-transform: uppercase; display: inline-flex;
+            align-items: center; justify-content: center; overflow: hidden; border: none;
+            cursor: pointer; transition: 0.5s; text-decoration: none;
         }
 
-        /* GLASS CARD PREMIERE */
+        .aura-shiny-btn::before {
+            content: ""; position: absolute; inset: -150%;
+            background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--p) 320deg, var(--s) 360deg);
+            animation: rotate-beam 3s linear infinite; z-index: 0;
+        }
+
+        .aura-shiny-btn::after {
+            content: ""; position: absolute; inset: var(--shiny-width);
+            background: #050505; border-radius: 10px; z-index: 1;
+        }
+
+        .inner-glow {
+            position: absolute; inset: 0;
+            background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.1) 50%, transparent 75%);
+            background-size: 200% 200%; animation: shine-move 4s infinite; z-index: 2;
+        }
+
+        .btn-content {
+            position: relative; z-index: 3; display: flex; align-items: center; gap: 10px;
+            background: linear-gradient(to right, #fff, #a855f7);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes rotate-beam { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes shine-move { 0% { background-position: -200% -200%; } 100% { background-position: 200% 200%; } }
+
+        /* CARD & BENTO */
         .card-premium {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 32px;
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
-        }
-        .card-premium:hover {
-            border-color: var(--p);
-            box-shadow: 0 0 50px rgba(99, 102, 241, 0.2);
-            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px;
+            transition: 0.5s; position: relative; overflow: hidden;
         }
 
-        /* THE HOOK TEXT */
-        .hook-title {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            line-height: 0.9;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-        }
-
-        .text-glow {
-            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
-        }
-
-        /* BUTTON SUPREME */
-        .btn-supreme {
-            background: #fff; color: #000;
-            padding: 1.2rem 3rem; border-radius: 100px;
-            font-weight: 800; text-transform: uppercase;
-            letter-spacing: 2px; font-size: 0.8rem;
-            transition: 0.4s; display: inline-block;
-        }
-        .btn-supreme:hover {
-            background: var(--p); color: #fff;
-            box-shadow: 0 0 30px var(--p);
-            transform: scale(1.1);
-        }
+        .text-gradient { background: linear-gradient(to right, #fff, var(--p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body>
 
     <div class="bg-warp"></div>
-    <div class="beam" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="beam" style="left: 30%; animation-delay: 1s;"></div>
-    <div class="beam" style="left: 70%; animation-delay: 2s;"></div>
-    <div class="beam" style="left: 90%; animation-delay: 0.5s;"></div>
+    <div class="beam" style="left: 15%; animation-delay: 0s;"></div>
+    <div class="beam" style="left: 45%; animation-delay: 2s;"></div>
+    <div class="beam" style="left: 85%; animation-delay: 1s;"></div>
 
-    <header class="fixed top-0 w-full z-[100] px-6 py-6 flex justify-between items-center backdrop-blur-md">
-        <div class="text-2xl font-black tracking-tighter uppercase">NEURALINK<span class="text-indigo-500">.</span></div>
-        <a href="https://wa.me/6285283212205" class="btn-supreme !px-6 !py-2 !text-[10px]">Access Now</a>
+    <header class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5 bg-black/20">
+        <div class="text-xl font-black tracking-tighter uppercase">NEURALINK<span class="text-indigo-500">.AI</span></div>
+        <a href="https://wa.me/6285283212205" class="aura-shiny-btn !px-4 !py-2 !text-[9px]">
+            <div class="inner-glow"></div>
+            <span class="btn-content">Join Now</span>
+        </a>
     </header>
 
-    <main class="relative z-10 px-6">
-        <section class="min-h-screen flex flex-col justify-center items-center text-center pt-20">
-            <div class="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-500/50 px-4 py-2 rounded-full mb-8 animate-bounce">
-                <span class="text-[10px] font-bold text-indigo-300 uppercase tracking-widest">Efficiency Multiplied by 10x</span>
+    <main class="pt-24">
+        <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6">
+            <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-2 rounded-full mb-8">
+                <span class="text-[9px] font-bold text-indigo-300 uppercase tracking-widest">Efficiency Multiplied by 10x</span>
             </div>
             
-            <h1 class="hook-title mb-8">
+            <h1 class="text-4xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.9]">
                 STOP WORKING.<br>
-                <span class="text-indigo-500 italic text-glow">START SCALING.</span>
+                <span class="text-gradient italic">START SCALING.</span>
             </h1>
             
-            <p class="text-gray-400 text-lg md:text-2xl max-w-3xl mb-12 leading-relaxed">
-                Neuralink AI bukan sekadar alat. Ini adalah <span class="text-white font-bold">otak kedua bisnis Anda</span> yang mengotomatisasi segalanya saat Anda tidur.
+            <p class="text-gray-400 text-sm md:text-xl max-w-2xl mb-10 leading-relaxed">
+                Neuralink AI adalah <span class="text-white font-bold">otak kedua bisnis Anda</span>. Otomatisasi alur kerja rumit dalam hitungan detik.
             </p>
 
-            <div class="flex flex-wrap justify-center gap-6 mb-20">
-                <a href="https://wa.me/6285283212205" class="btn-supreme">Deploy Your AI Now →</a>
-            </div>
+            <a href="https://wa.me/6285283212205" class="aura-shiny-btn">
+                <div class="inner-glow"></div>
+                <span class="btn-content">
+                    Deploy Your AI Now
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke: #a855f7;"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+            </a>
 
-            <div class="w-full max-w-6xl mx-auto card-premium p-1 md:p-4 group">
-                <div class="relative rounded-[24px] overflow-hidden bg-black/40">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" 
-                         alt="AI Dashboard Illustration" 
-                         class="w-full opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"></div>
-                    
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+            <div class="w-full max-w-5xl mx-auto mt-20 card-premium p-1">
+                <div class="relative rounded-[28px] overflow-hidden bg-black/40 min-h-[300px] md:min-h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent"></div>
+                    <div class="relative w-full h-[300px] md:h-[500px]">
                         <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-premium p-10 flex flex-col justify-between h-[400px]">
+        <section class="py-32 container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-premium p-8 h-[300px] flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-indigo-500 rounded-2xl mb-6 shadow-[0_0_20px_rgba(99,102,241,0.5)]"></div>
-                        <h3 class="text-3xl font-bold mb-4">Neural Data</h3>
-                        <p class="text-gray-500">Analisis jutaan pola data untuk prediksi market yang 99% akurat.</p>
-                    </div>
-                    <div class="text-6xl font-black text-white/5 uppercase">Data</div>
-                </div>
-
-                <div class="card-premium p-10 md:col-span-2 bg-gradient-to-br from-indigo-900/20 to-transparent">
-                    <h3 class="text-4xl font-black mb-6 italic">24/7 Autopilot</h3>
-                    <p class="text-gray-400 text-lg mb-8">Biarkan AI menangani customer support, sales tracking, dan workflow management secara otomatis tanpa henti.</p>
-                    <div class="flex gap-4">
-                        <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-indigo-500 w-[70%] animate-pulse"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-[10px] font-black tracking-[1.5em] text-gray-700 uppercase">Neuralink AI • Omniversal Project #6</p>
-    </footer>
-
-</body>
-</html>
+                        <div class="w-10 h-10 bg-indigo-500 rounded-xl mb-4 shadow-[0_0
