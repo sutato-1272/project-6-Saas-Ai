@@ -4,155 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Lumina Glow | Rahasia Kulit Bercahaya Alami dengan Kekuatan Teknologi</title>
-    <meta name="description" content="Rasakan transformasi kulit dengan Lumina Glow. Serum & perawatan wajah premium yang memadukan ekstrak alami langka dengan teknologi bio-aktif mutakhir.">
-    <meta name="keywords" content="Skincare Mewah Indonesia, Perawatan Wajah Premium, Serum Anti-Aging Terbaik, Lumina Glow, Kecantikan Alami, Glowing Skin">
-    <link rel="canonical" href="https://lumina-glow.vercel.app/">
+    <title>Neuralink AI | Dominasi Pasar dengan Automasi AI Tercanggih</title>
+    <meta name="description" content="Hancurkan hambatan operasional. Neuralink AI membangun infrastruktur cerdas yang bekerja 24/7 untuk skala bisnis global.">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Lumina Glow Serum Elixir",
-      "description": "Serum wajah bio-aktif untuk kulit bercahaya alami.",
-      "brand": { "@type": "Brand", "name": "Lumina Glow" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "IDR",
-        "price": "1250000",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
 
     <style>
-        :root { 
-            --primary-bg: #1a001a; 
-            --glow-color: #f7a0e1; 
-            --accent-color: #c084fc; 
-            --light-bg: #2a0a2a;
-        }
-
-        html, body { 
-            max-width: 100%; 
-            overflow-x: hidden; 
-            margin: 0; padding: 0;
-            background-color: var(--primary-bg);
-            font-family: 'Poppins', sans-serif;
+        :root { --p: #6366f1; --s: #a855f7; --bg: #030014; }
+        
+        body { 
+            background-color: var(--bg);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             color: #fff;
+            overflow-x: hidden;
         }
 
-        /* DYNAMIC GRADIENT BACKGROUND (EYE-CATCHING) */
-        .dynamic-gradient {
-            position: fixed; inset: 0; z-index: -2;
-            background: linear-gradient(135deg, #1a001a, #3a003a);
-            animation: gradient-shift 15s ease infinite alternate;
+        /* ATMOSPHERIC BACKGROUND (WARP SPEED) */
+        .bg-warp {
+            position: fixed; inset: 0; z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #030014 100%);
         }
-        @keyframes gradient-shift {
-            0% { background: linear-gradient(135deg, #1a001a, #3a003a); }
-            33% { background: linear-gradient(135deg, #2a002a, #4a004a); }
-            66% { background: linear-gradient(135deg, #3a003a, #5a005a); }
-            100% { background: linear-gradient(135deg, #1a001a, #3a003a); }
+        .bg-warp::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
         }
 
-        /* FLOATING PETALS (ILLUSTRATION) */
-        .petal {
-            position: absolute; width: 80px; height: 80px; opacity: 0;
-            background: radial-gradient(circle, rgba(247, 160, 225, 0.2), transparent 70%);
-            border-radius: 50%; pointer-events: none; z-index: -1;
-            animation: float-petal 15s infinite;
+        /* NEON BEAM ANIMATION */
+        .beam {
+            position: absolute; width: 2px; height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--p), transparent);
+            opacity: 0.5; animation: beam-drop 3s linear infinite;
         }
-        .petal:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .petal:nth-child(2) { left: 40%; top: 5%; animation-delay: 5s; transform: scale(0.8); }
-        .petal:nth-child(3) { left: 70%; top: 30%; animation-delay: 10s; transform: scale(1.2); }
-        @keyframes float-petal {
-            0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg) scale(1); opacity: 0; }
+        @keyframes beam-drop {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
         }
 
-        /* GLASS CARD (MODIFIED AURA.BUILD) */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+        /* GLASS CARD PREMIERE */
+        .card-premium {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 2rem;
-            transition: 0.4s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 32px;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; overflow: hidden;
         }
-        @media (min-width: 768px) { .glass-card { padding: 3rem; } }
-
-        /* HERO TEXT STYLE */
-        .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem; /* mobile */
-            line-height: 1.1;
-            letter-spacing: -0.05em;
-        }
-        @media (min-width: 768px) { .hero-title { font-size: 5rem; } }
-
-        /* BUTTON AURA (LUMINA STYLE) */
-        .btn-lumina {
-            position: relative; display: inline-flex; padding: 1rem 2.5rem;
-            background: linear-gradient(45deg, #f7a0e1, #c084fc); /* Soft gradient */
-            border-radius: 12px; font-weight: 700; overflow: hidden;
-            transition: 0.3s; z-index: 1;
-            color: #1a001a;
-        }
-        .btn-lumina:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(247, 160, 225, 0.4);
+        .card-premium:hover {
+            border-color: var(--p);
+            box-shadow: 0 0 50px rgba(99, 102, 241, 0.2);
+            transform: translateY(-10px);
         }
 
-        .text-gradient-soft {
-            background: linear-gradient(135deg, #fff 30%, #f7a0e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* THE HOOK TEXT */
+        .hook-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.9;
+            font-weight: 800;
+            letter-spacing: -0.04em;
         }
 
-        /* SPLINE CONTAINER */
-        .spline-wrap {
-            width: 100%; height: 350px; position: relative;
+        .text-glow {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
         }
-        @media (min-width: 768px) { .spline-wrap { height: 500px; } }
+
+        /* BUTTON SUPREME */
+        .btn-supreme {
+            background: #fff; color: #000;
+            padding: 1.2rem 3rem; border-radius: 100px;
+            font-weight: 800; text-transform: uppercase;
+            letter-spacing: 2px; font-size: 0.8rem;
+            transition: 0.4s; display: inline-block;
+        }
+        .btn-supreme:hover {
+            background: var(--p); color: #fff;
+            box-shadow: 0 0 30px var(--p);
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
 
-    <div class="dynamic-gradient"></div>
-    <div class="petal"></div>
-    <div class="petal"></div>
-    <div class="petal"></div>
+    <div class="bg-warp"></div>
+    <div class="beam" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="beam" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="beam" style="left: 70%; animation-delay: 2s;"></div>
+    <div class="beam" style="left: 90%; animation-delay: 0.5s;"></div>
 
-    <header class="fixed top-0 w-full z-[100] px-4 py-4 flex justify-between items-center backdrop-blur-md bg-black/10">
-        <div class="text-xl font-bold italic tracking-wider text-gradient-soft">LUMINA<span class="text-purple-300">GLOW</span></div>
-        <a href="https://wa.me/6285283212205" class="bg-gradient-to-br from-[#f7a0e1] to-[#c084fc] text-black px-4 py-2 rounded-full font-bold text-xs uppercase tracking-wider hover:scale-105 transition">Shop Now</a>
+    <header class="fixed top-0 w-full z-[100] px-6 py-6 flex justify-between items-center backdrop-blur-md">
+        <div class="text-2xl font-black tracking-tighter uppercase">NEURALINK<span class="text-indigo-500">.</span></div>
+        <a href="https://wa.me/6285283212205" class="btn-supreme !px-6 !py-2 !text-[10px]">Access Now</a>
     </header>
 
-    <main>
-        <section class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 items-center gap-8 lg:gap-16">
-                
-                <div class="glass-card relative z-10 order-2 lg:order-1">
-                    <div class="inline-block bg-gradient-to-r from-purple-400/20 to-pink-400/20 px-3 py-1 rounded-full mb-4">
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-purple-200">New Age Elixir Formula</span>
+    <main class="relative z-10 px-6">
+        <section class="min-h-screen flex flex-col justify-center items-center text-center pt-20">
+            <div class="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-500/50 px-4 py-2 rounded-full mb-8 animate-bounce">
+                <span class="text-[10px] font-bold text-indigo-300 uppercase tracking-widest">Efficiency Multiplied by 10x</span>
+            </div>
+            
+            <h1 class="hook-title mb-8">
+                STOP WORKING.<br>
+                <span class="text-indigo-500 italic text-glow">START SCALING.</span>
+            </h1>
+            
+            <p class="text-gray-400 text-lg md:text-2xl max-w-3xl mb-12 leading-relaxed">
+                Neuralink AI bukan sekadar alat. Ini adalah <span class="text-white font-bold">otak kedua bisnis Anda</span> yang mengotomatisasi segalanya saat Anda tidur.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-20">
+                <a href="https://wa.me/6285283212205" class="btn-supreme">Deploy Your AI Now →</a>
+            </div>
+
+            <div class="w-full max-w-6xl mx-auto card-premium p-1 md:p-4 group">
+                <div class="relative rounded-[24px] overflow-hidden bg-black/40">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" 
+                         alt="AI Dashboard Illustration" 
+                         class="w-full opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-105">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+                        <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
                     </div>
-                    <h1 class="hero-title font-bold mb-4 text-gradient-soft">
-                        Kecantikan <br> Abadi, <br> Diciptakan Ulang.
-                    </h1>
-                    <p class="text-gray-200 text-sm md:text-base mb-8 leading-relaxed max-w-md">
-                        Ungkap rahasia kulit bercahaya sempurna dengan <span class="text-white font-bold">Lumina Glow</span>. Perpaduan harmonis antara ekstrak botani langka dan teknologi bio-aktif mutakhir.
-                    </p>
-                    <a href="https://wa.me/6285283212205" class="btn-lumina">
-                        <span>TEMUKAN CAHAYA ANDA →</span>
-                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-premium p-10 flex flex-col justify-between h-[400px]">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-500 rounded-2xl mb-6 shadow-[0_0_20px_rgba(99,102,241,0.5)]"></div>
+                        <h3 class="text-3xl font-bold mb-4">Neural Data</h3>
+                        <p class="text-gray-500">Analisis jutaan pola data untuk prediksi market yang 99% akurat.</p>
+                    </div>
+                    <div class="text-6xl font-black text-white/5 uppercase">Data</div>
                 </div>
 
-                <div class="spline-wrap relative z-10 order-1 lg:order-2">
-                    <spline-viewer url="
+                <div class="card-premium p-10 md:col-span-2 bg-gradient-to-br from-indigo-900/20 to-transparent">
+                    <h3 class="text-4xl font-black mb-6 italic">24/7 Autopilot</h3>
+                    <p class="text-gray-400 text-lg mb-8">Biarkan AI menangani customer support, sales tracking, dan workflow management secara otomatis tanpa henti.</p>
+                    <div class="flex gap-4">
+                        <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-indigo-500 w-[70%] animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[10px] font-black tracking-[1.5em] text-gray-700 uppercase">Neuralink AI • Omniversal Project #6</p>
+    </footer>
+
+</body>
+</html>
