@@ -34,7 +34,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Ganti 'MASUKAN_ID_PIXEL_DISINI' dengan ID Pixel Asli
+    // Ganti ID Pixel
     fbq('init', 'MASUKAN_ID_PIXEL_DISINI');
     fbq('track', 'PageView');
     </script>
@@ -157,9 +157,12 @@
                 </a>
             </div>
             
-            <div class="w-full max-w-6xl card-premium p-1 relative group">
-                <div class="relative z-10 h-[400px] md:h-[600px] bg-black/40">
-                    <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
+            <div class="w-full max-w-6xl card-premium p-1 relative group overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-40">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000" class="w-full h-full object-cover" alt="AI Dashboard Neural Network">
+                </div>
+
+                <div class="relative z-10 h-[400px] md:h-[600px] bg-black/10"> <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
                 </div>
             </div>
         </section>
@@ -167,28 +170,28 @@
         <section id="benefits" class="py-32 container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-black mb-16 text-center tracking-tighter uppercase italic">Why Choose <span class="text-indigo-500">Neuralink?</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card-premium p-10 h-[350px] flex flex-col justify-between group">
-                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition duration-500">
+                <div class="card-premium p-10 h-[350px] flex flex-col justify-between group relative">
+                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition duration-500">
                     <div>
                         <h3 class="text-2xl font-bold relative z-10 text-white group-hover:text-indigo-400 transition">99% Data Accuracy</h3>
-                        <p class="text-gray-500 relative z-10 mt-2 text-sm">Prediksi tren market sebelum pesaing Anda mengetahuinya dengan algoritma Deep Learning.</p>
+                        <p class="text-gray-400 relative z-10 mt-2 text-sm">Prediksi tren market sebelum pesaing Anda mengetahuinya.</p>
                     </div>
-                    <div class="text-6xl font-black text-white/5 text-right">01</div>
+                    <div class="text-6xl font-black text-white/10 text-right relative z-10">01</div>
                 </div>
-                <div class="card-premium p-10 h-[350px] flex flex-col justify-between border-indigo-500/50 bg-indigo-500/5">
+                <div class="card-premium p-10 h-[350px] flex flex-col justify-between border-indigo-500/50 bg-indigo-500/10">
                     <div>
                         <h3 class="text-2xl font-bold text-white">24/7 Autopilot</h3>
-                        <p class="text-gray-500 mt-2 text-sm">Customer service, sales, dan report berjalan otomatis tanpa henti, bahkan saat Anda tidur.</p>
+                        <p class="text-gray-400 mt-2 text-sm">Customer service, sales, dan report berjalan otomatis tanpa henti.</p>
                     </div>
-                    <div class="text-6xl font-black text-white/5 text-right">02</div>
+                    <div class="text-6xl font-black text-white/10 text-right">02</div>
                 </div>
-                <div class="card-premium p-10 h-[350px] flex flex-col justify-between group">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition duration-500">
+                <div class="card-premium p-10 h-[350px] flex flex-col justify-between group relative">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition duration-500">
                     <div>
                         <h3 class="text-2xl font-bold relative z-10 text-white group-hover:text-indigo-400 transition">Instant Scaling</h3>
-                        <p class="text-gray-500 relative z-10 mt-2 text-sm">Naikkan kapasitas bisnis hingga 10x lipat tanpa perlu menambah headcount karyawan baru.</p>
+                        <p class="text-gray-400 relative z-10 mt-2 text-sm">Naikkan kapasitas bisnis hingga 10x lipat.</p>
                     </div>
-                    <div class="text-6xl font-black text-white/5 text-right">03</div>
+                    <div class="text-6xl font-black text-white/10 text-right relative z-10">03</div>
                 </div>
             </div>
         </section>
