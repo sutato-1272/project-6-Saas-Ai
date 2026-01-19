@@ -6,10 +6,41 @@
     
     <title>Neuralink AI | Solusi Automasi Bisnis Autopilot 10x Lipat</title>
     <meta name="description" content="Otomatisasi bisnis Anda dengan infrastruktur AI tercanggih. Tingkatkan efisiensi 10x lipat dengan sistem autopilot dari Neuralink AI.">
+    <meta name="keywords" content="SaaS AI, Automasi Bisnis, Chatbot AI Ciledug, Jasa Pembuatan Website AI, Neuralink AI, Tech Startup Indonesia">
     <meta property="og:title" content="Neuralink AI - Otak Kedua Bisnis Anda">
     <meta property="og:description" content="Solusi SaaS AI untuk skala bisnis global.">
+    <meta name="author" content="Ciledug Promo Tech Division">
     <link rel="canonical" href="https://project-6-saas-ai.vercel.app/">
     
+    <meta name="google-site-verification" content="PASTE_KODE_GSC_DISINI" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONTOH_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-CONTOH_ID'); 
+      gtag('config', 'G-CONTOH_ID'); 
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Ganti 'MASUKAN_ID_PIXEL_DISINI' dengan ID Pixel Asli
+    fbq('init', 'MASUKAN_ID_PIXEL_DISINI');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=MASUKAN_ID_PIXEL_DISINI&ev=PageView&noscript=1"
+    /></noscript>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
@@ -20,20 +51,15 @@
         html { scroll-behavior: smooth; }
         body { background-color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; overflow-x: hidden; margin: 0; }
 
-        /* ATMOSPHERIC BACKGROUND & METEOR */
-        .bg-space { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #030014 100%); }
-        .starfall {
-            position: absolute; width: 2px; height: 150px;
-            background: linear-gradient(to bottom, transparent, var(--s), #fff);
-            opacity: 0.6; animation: starfall-anim 5s linear infinite; filter: drop-shadow(0 0 10px var(--s));
-            z-index: 0;
+        /* TECH-GRID BACKGROUND (SIAGA 1 VISUAL) */
+        .bg-grid {
+            position: fixed; inset: 0; z-index: -1;
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
         }
-        @keyframes starfall-anim {
-            0% { transform: translateY(-200px) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            100% { transform: translateY(110vh) translateX(100px); opacity: 0; }
-        }
-
+        
         /* SHINY BUTTON AURA */
         .aura-shiny-btn {
             position: relative; padding: 1rem 2.5rem; border-radius: 12px;
@@ -70,22 +96,36 @@
         }
         @keyframes pulse-wa { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
-        .card-premium { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px; transition: 0.5s; overflow: hidden; }
+        .card-premium { background: rgba(20, 20, 25, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 24px; transition: 0.5s; overflow: hidden; }
+        .card-premium:hover { border-color: var(--p); box-shadow: 0 0 30px rgba(99, 102, 241, 0.15); transform: translateY(-5px); }
+        
         .text-gradient { background: linear-gradient(to right, #fff, var(--p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         /* HEADER FIX */
         header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(3, 0, 20, 0.8); }
+
+        /* MAP FRAME */
+        .tech-map-frame {
+            position: relative;
+            border: 1px solid var(--p);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+        .tech-map-frame::before {
+            content: "SCANNING SECTOR 7...";
+            position: absolute; top: 0; left: 0; right: 0;
+            background: rgba(0,0,0,0.8); color: var(--p);
+            font-size: 10px; font-weight: bold; letter-spacing: 2px;
+            padding: 5px; text-align: center; border-bottom: 1px solid var(--p); z-index: 10;
+        }
     </style>
 </head>
 <body>
 
-    <div class="bg-space"></div>
-    <div class="starfall" style="left: 15%; animation-delay: 0s;"></div>
-    <div class="starfall" style="left: 45%; animation-delay: 2s;"></div>
-    <div class="starfall" style="left: 75%; animation-delay: 1s;"></div>
-    <div class="starfall" style="left: 85%; animation-delay: 3.5s;"></div>
+    <div class="bg-grid"></div>
 
-    <a href="https://wa.me/6285283212205" class="floating-wa" target="_blank">
+    <a href="https://wa.me/6285283212205?text=Halo%20Admin%20Neuralink,%20saya%20butuh%20bantuan%20support" class="floating-wa" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
     </a>
 
@@ -97,7 +137,7 @@
             <a href="#testi" class="hover:text-white transition">Testimonials</a>
             <a href="#faq" class="hover:text-white transition">FAQ</a>
         </div>
-        <a href="https://wa.me/6285283212205" class="aura-shiny-btn !px-4 !py-2 !text-[9px]">
+        <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20mau%20TRIAL%20Neuralink%20AI" target="_blank" class="aura-shiny-btn !px-4 !py-2 !text-[9px]">
             <div class="inner-glow"></div>
             <span class="btn-content">Get Started</span>
         </a>
@@ -105,19 +145,19 @@
 
     <main class="pt-24">
         <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-            <h1 class="text-6xl md:text-[100px] font-black leading-[0.85] tracking-tighter mb-8">
+            <h1 class="text-5xl md:text-[90px] font-black leading-[0.9] tracking-tighter mb-8">
                 STOP WORKING.<br><span class="text-gradient italic">START SCALING.</span>
             </h1>
-            <p class="text-gray-400 md:text-xl max-w-2xl mb-12">Otomatisasi seluruh alur kerja bisnis Anda dalam 1 klik. Biarkan AI bekerja saat Anda berlibur.</p>
-            <a href="https://wa.me/6285283212205" class="aura-shiny-btn mb-20">
-                <div class="inner-glow"></div>
-                <span class="btn-content">DEPLOY AI NOW →</span>
-            </a>
+            <p class="text-gray-400 md:text-xl max-w-2xl mb-12 font-light">Otomatisasi seluruh alur kerja bisnis Anda dalam 1 klik. Biarkan AI bekerja 24/7 saat Anda berlibur.</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 mb-20">
+                <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20mau%20DEPLOY%20AI%20sekarang" target="_blank" class="aura-shiny-btn">
+                    <div class="inner-glow"></div>
+                    <span class="btn-content">DEPLOY AI NOW →</span>
+                </a>
+            </div>
             
             <div class="w-full max-w-6xl card-premium p-1 relative group">
-                <div class="absolute inset-0 z-0 opacity-40">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000" class="w-full h-full object-cover">
-                </div>
                 <div class="relative z-10 h-[400px] md:h-[600px] bg-black/40">
                     <spline-viewer url="https://prod.spline.design/iK-785-Q8fN6Y3D1/scene.splinecode"></spline-viewer>
                 </div>
@@ -125,73 +165,88 @@
         </section>
 
         <section id="benefits" class="py-32 container mx-auto px-6">
-            <h2 class="text-4xl font-black mb-16 text-center tracking-tighter uppercase italic">Kenapa Harus <span class="text-indigo-500">Neuralink?</span></h2>
+            <h2 class="text-3xl md:text-4xl font-black mb-16 text-center tracking-tighter uppercase italic">Why Choose <span class="text-indigo-500">Neuralink?</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="card-premium p-10 h-[350px] flex flex-col justify-between group">
                     <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition duration-500">
-                    <h3 class="text-2xl font-bold relative z-10">99% Akurasi Data</h3>
-                    <p class="text-gray-500 relative z-10">Prediksi tren market sebelum pesaing Anda mengetahuinya.</p>
-                    <div class="text-6xl font-black text-white/5">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold relative z-10 text-white group-hover:text-indigo-400 transition">99% Data Accuracy</h3>
+                        <p class="text-gray-500 relative z-10 mt-2 text-sm">Prediksi tren market sebelum pesaing Anda mengetahuinya dengan algoritma Deep Learning.</p>
+                    </div>
+                    <div class="text-6xl font-black text-white/5 text-right">01</div>
                 </div>
                 <div class="card-premium p-10 h-[350px] flex flex-col justify-between border-indigo-500/50 bg-indigo-500/5">
-                    <h3 class="text-2xl font-bold">24/7 Autopilot</h3>
-                    <p class="text-gray-500">Customer service, sales, dan report berjalan otomatis tanpa henti.</p>
-                    <div class="text-6xl font-black text-white/5">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">24/7 Autopilot</h3>
+                        <p class="text-gray-500 mt-2 text-sm">Customer service, sales, dan report berjalan otomatis tanpa henti, bahkan saat Anda tidur.</p>
+                    </div>
+                    <div class="text-6xl font-black text-white/5 text-right">02</div>
                 </div>
                 <div class="card-premium p-10 h-[350px] flex flex-col justify-between group">
                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition duration-500">
-                    <h3 class="text-2xl font-bold relative z-10">Instan Scaling</h3>
-                    <p class="text-gray-500 relative z-10">Naikkan kapasitas bisnis tanpa menambah headcount karyawan.</p>
-                    <div class="text-6xl font-black text-white/5">03</div>
+                    <div>
+                        <h3 class="text-2xl font-bold relative z-10 text-white group-hover:text-indigo-400 transition">Instant Scaling</h3>
+                        <p class="text-gray-500 relative z-10 mt-2 text-sm">Naikkan kapasitas bisnis hingga 10x lipat tanpa perlu menambah headcount karyawan baru.</p>
+                    </div>
+                    <div class="text-6xl font-black text-white/5 text-right">03</div>
                 </div>
             </div>
         </section>
 
         <section id="testi" class="py-20 bg-white/5">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-black mb-12 uppercase italic">Kata Mereka Yang Sudah <span class="text-indigo-500">Sukses</span></h2>
+                <h2 class="text-3xl font-black mb-12 uppercase italic">Success <span class="text-indigo-500">Stories</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card-premium p-8 flex flex-col items-center">
-                        <img src="https://i.pravatar.cc/150?u=1" class="w-16 h-16 rounded-full border-2 border-indigo-500 mb-4">
-                        <p class="italic text-gray-300 mb-6">"Gila! Omzet naik 300% setelah pakai Neuralink AI. Dulu pusing urus CS, sekarang semua beres ditinggal tidur."</p>
-                        <h4 class="font-bold text-sm">Andi Pratama</h4>
-                        <p class="text-[10px] text-gray-500">CEO Tech-Indo</p>
+                    <div class="card-premium p-8 flex flex-col items-center hover:bg-white/5 transition">
+                        <img src="https://i.pravatar.cc/150?u=1" class="w-16 h-16 rounded-full border-2 border-indigo-500 mb-4 shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                        <p class="italic text-gray-300 mb-6 text-sm leading-relaxed">"Gila! Omzet naik 300% setelah pakai Neuralink AI. Dulu pusing urus CS manual, sekarang semua beres ditinggal tidur. Recommended!"</p>
+                        <h4 class="font-bold text-sm text-white">Andi Pratama</h4>
+                        <p class="text-[10px] text-gray-500 tracking-widest uppercase">CEO Tech-Indo</p>
                     </div>
-                    <div class="card-premium p-8 flex flex-col items-center">
-                        <img src="https://i.pravatar.cc/150?u=2" class="w-16 h-16 rounded-full border-2 border-purple-500 mb-4">
-                        <p class="italic text-gray-300 mb-6">"Template paling nendang yang pernah saya beli. Supportnya luar biasa dari tim Ciledug Promo!"</p>
-                        <h4 class="font-bold text-sm">Siska Amelia</h4>
-                        <p class="text-[10px] text-gray-500">Founder Beauty-AI</p>
+                    <div class="card-premium p-8 flex flex-col items-center hover:bg-white/5 transition">
+                        <img src="https://i.pravatar.cc/150?u=2" class="w-16 h-16 rounded-full border-2 border-purple-500 mb-4 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                        <p class="italic text-gray-300 mb-6 text-sm leading-relaxed">"Template paling nendang yang pernah saya beli. Supportnya luar biasa dari tim Ciledug Promo. Sangat worth it!"</p>
+                        <h4 class="font-bold text-sm text-white">Siska Amelia</h4>
+                        <p class="text-[10px] text-gray-500 tracking-widest uppercase">Founder Beauty-AI</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="py-32 container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl font-black mb-12 text-center uppercase">FAQ</h2>
+        <section id="faq" class="py-32 container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-black mb-12 text-center uppercase">System <span class="text-indigo-500">FAQ</span></h2>
             <div class="space-y-4">
                 <details class="card-premium p-6 cursor-pointer group">
-                    <summary class="font-bold group-hover:text-indigo-400 transition">Apakah ini cocok untuk bisnis pemula?</summary>
-                    <p class="mt-4 text-gray-500 text-sm">Sangat cocok. Justru dengan AI, Anda tidak perlu modal besar untuk merekrut banyak tim di awal.</p>
+                    <summary class="font-bold group-hover:text-indigo-400 transition list-none flex justify-between items-center">
+                        Apakah ini cocok untuk bisnis pemula?
+                        <span class="text-indigo-500">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">Sangat cocok. Justru dengan AI, Anda tidak perlu modal besar untuk merekrut banyak tim di awal. Hemat biaya operasional hingga 70%.</p>
                 </details>
                 <details class="card-premium p-6 cursor-pointer group">
-                    <summary class="font-bold group-hover:text-indigo-400 transition">Berapa lama proses deploy-nya?</summary>
-                    <p class="mt-4 text-gray-500 text-sm">Sistem kami bisa aktif dalam waktu kurang dari 24 jam setelah setup selesai.</p>
+                    <summary class="font-bold group-hover:text-indigo-400 transition list-none flex justify-between items-center">
+                        Berapa lama proses deploy-nya?
+                        <span class="text-indigo-500">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">Sistem kami dirancang Plug & Play. Website dan sistem AI bisa aktif dalam waktu kurang dari 24 jam setelah data kami terima.</p>
                 </details>
             </div>
         </section>
 
         <section class="py-20 container mx-auto px-6">
-            <div class="card-premium p-4 overflow-hidden h-[450px]">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.48622959881!2d106.63412354335939!3d-6.245232100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa0f4e38e831%3A0xc33e1476f5984034!2sJasa%20Pembuatan%20Landing%20Page%20Murah%20Ciledug!5e0!3m2!1sid!2sid!4v1715600000000!5m2!1sid!2sid" 
-                    width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
+            <div class="max-w-4xl mx-auto">
+                <div class="tech-map-frame h-[450px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" 
+                        width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(1.2);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p class="text-center text-[10px] text-indigo-400 mt-4 tracking-[0.2em] animate-pulse">● SECURE CONNECTION ESTABLISHED // LOCATION: TANGERANG</p>
             </div>
         </section>
 
-        <section class="py-32 text-center px-6">
-            <h2 class="text-4xl md:text-6xl font-black mb-8 italic">SIAP UNTUK <span class="text-indigo-500 underline">DOMINASI?</span></h2>
-            <p class="text-gray-400 mb-12">Jangan biarkan kompetitor menggunakan AI lebih dulu dari Anda.</p>
-            <a href="https://wa.me/6285283212205" class="aura-shiny-btn">
+        <section class="py-32 text-center px-6 bg-gradient-to-t from-indigo-900/20 to-transparent">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 italic">READY FOR <span class="text-indigo-500 underline decoration-wavy underline-offset-8">DOMINATION?</span></h2>
+            <p class="text-gray-400 mb-12 max-w-xl mx-auto">Jangan biarkan kompetitor menggunakan teknologi ini lebih dulu dari Anda. Waktu adalah uang.</p>
+            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20siap%20DOMINASI%20PASAR%20dengan%20Neuralink%20AI" target="_blank" class="aura-shiny-btn">
                 <div class="inner-glow"></div>
                 <span class="btn-content">KONSULTASI GRATIS SEKARANG</span>
             </a>
@@ -200,9 +255,9 @@
 
     <footer class="py-10 border-t border-white/5 text-center bg-black">
         <p class="text-[10px] font-black tracking-[1em] text-gray-600 mb-4 uppercase">Neuralink AI • Created by CiledugPromo.biz.id</p>
-        <div class="flex justify-center gap-6 opacity-30 text-[8px] font-bold">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+        <div class="flex justify-center gap-6 opacity-30 text-[8px] font-bold uppercase tracking-widest text-gray-500">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
         </div>
     </footer>
 
